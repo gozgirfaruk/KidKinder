@@ -1,0 +1,34 @@
+﻿@model KidKinder.Models.Entities.Teacher
+@{
+    ViewBag.Title = "BringTeacher";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
+
+
+<div class="container">
+    <div class="form-container">
+        @using (Html.BeginForm("Update", "Teacher", FormMethod.Post))
+        {
+            <form method="post">
+                <label>ID</label>
+                @Html.TextBoxFor(x=>x.TeacherId,new { @type="hidden"})
+                <br />
+                <label>Ad-Soyad</label>
+                @Html.TextBoxFor(x => x.NameSurname)
+                <br />
+                <label>Branş</label>
+                @Html.TextBoxFor(x => x.Title)
+                <br />
+                <label>Resim Yolu</label>
+                @Html.TextBoxFor(x => x.ImageUrl)
+                <br />
+                <button class="btn btn-outline-secondary">Güncelle</button>
+            </form>
+        }
+    </div>
+</div>
+
+
+

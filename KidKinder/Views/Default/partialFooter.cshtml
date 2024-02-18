@@ -1,0 +1,108 @@
+﻿@using KidKinder.Models.Entities
+<div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <a href=""
+               class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+               style="font-size: 40px; line-height: 40px">
+                <i class="flaticon-043-teddy-bear"></i>
+                <span class="text-white">KidKinder</span>
+            </a>
+            <p>
+                Kreş olarak, sevgi dolu ve güvenli bir ortamda çocuklara en iyi eğitimi sunmayı hedefliyoruz. 
+                Deneyimli ve güler yüzlü ekibimizle, her çocuğun bireysel ihtiyaçlarını gözeterek gelişimlerini destekliyoruz.
+            </p>
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                   style="width: 38px; height: 38px"
+                   href="https://github.com/gozgirfaruk">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                   style="width: 38px; height: 38px"
+                   href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                   style="width: 38px; height: 38px"
+                   href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h3 class="text-primary mb-4">İletişim</h3>
+            <div class="d-flex">
+                <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                <div class="pl-3">
+                    <h5 class="text-white">Adres</h5>
+                    <p>27500,Şahinbey,Gaziantep</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <h4 class="fa fa-envelope text-primary"></h4>
+                <div class="pl-3">
+                    <h5 class="text-white">Email</h5>
+                    <p>gozgirfaruk@gmail.com</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <h4 class="fa fa-phone-alt text-primary"></h4>
+                <div class="pl-3">
+                    <h5 class="text-white">Telefon</h5>
+                    <p>+012 345 67890</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h3 class="text-primary mb-4">Hızlı Gezinti</h3>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white mb-2" href="/Default/Index/"><i class="fa fa-angle-right mr-2"></i>Ana Sayfa</a>
+                <a class="text-white mb-2" href="/Default/AboutIndex/"><i class="fa fa-angle-right mr-2"></i>Hakkımızda</a>
+                <a class="text-white mb-2" href="/Default/ClassesIndex/"><i class="fa fa-angle-right mr-2"></i>Eğitim Gruplarımız</a>
+                <a class="text-white mb-2" href="/Default/TeachersIndex/"><i class="fa fa-angle-right mr-2"></i>Öğretmenlerimiz</a>
+                <a class="text-white mb-2" href="/Default/GalleryIndex/"><i class="fa fa-angle-right mr-2"></i>Galeri</a>
+                <a class="text-white" href="/Default/ContactIndex"><i class="fa fa-angle-right mr-2"></i>İletişim</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h3 class="text-primary mb-4">Bültene Kayıt Ol</h3>
+            @using(Html.BeginForm("FooterSubs","Default",FormMethod.Post))
+            {
+        <form method="post">
+            <div class="form-group">
+                <input type="text"
+                       class="form-control border-0 py-4"
+                       placeholder="Ad/Soyad"
+                       name="NameSurname"
+                       required="required" />
+            </div>
+            <div class="form-group">
+                <input type="email"
+                       class="form-control border-0 py-4"
+                       placeholder="Email"
+                       name="Email"
+                       required="required" />
+            </div>
+            <div>
+                <button class="btn btn-primary btn-block border-0 py-3"
+                        type="submit">
+                    Şimdi Katıl
+                </button>
+            </div>
+        </form>
+            }
+            
+        </div>
+    </div>
+    <div class="container-fluid pt-5"
+         style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
+        <p class="m-0 text-center text-white">
+            &copy;
+            <a class="text-primary font-weight-bold" href="#">Kreş</a>.
+         <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+            <br />Distributed By:
+            <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+        </p>
+    </div>
+</div>

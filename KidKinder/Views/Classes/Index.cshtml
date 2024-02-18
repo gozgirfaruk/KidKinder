@@ -1,0 +1,36 @@
+﻿@using KidKinder.Models.Entities
+@model List<ClassRoom>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>SINIFLAR</h2>
+<br />
+
+<table class="table table-border">
+    <tr>
+        <th>Başlık</th>
+        <th>Toplam Ders</th>
+        <th>Ders Saati</th>
+        <th>Ücret</th>
+        <th>Gözat</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.TotalSeat</td>
+            <td>@item.ClassTime</td>
+            <td>@item.Price</td>
+            <td><a href="/Classes/DetailClasses/" class="btn btn-outline-secondary"><i class="fa fa-level-up"></i>Gözat</a></td>
+            <td><a href="/Classes/BringClass/@item.ClassRoomId" class="btn btn-outline-warning"><i class="fa fa-edit"></i>Güncelle</a></td>
+            <td><a href="/Classes/Delete/@item.ClassRoomId" class="btn btn-outline-danger"><i class="fa fa-times-circle"></i>Sil</a></td>
+        </tr>
+            }
+   
+</table>
+<a href="/Classes/Create/" class="btn btn-outline-success"><i class="fa fa-plus-circle"></i>Yeni Sınıf Oluştur</a>

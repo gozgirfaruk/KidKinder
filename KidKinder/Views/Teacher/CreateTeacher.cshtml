@@ -1,0 +1,33 @@
+﻿@model KidKinder.Models.Entities.Teacher
+@{
+    ViewBag.Title = "CreateTeacher";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<link href="~/Template/KidAdmin/assets/css/Form1.css" rel="stylesheet" />
+
+@Html.BeginForm("CreateTeacher", "Teacher", FormMethod.Post)
+{
+
+<div class="container">
+    <div class="form-container">
+
+        <form method="post">
+            <label>Personel Ad-Soyad</label>
+            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", @required = "required" })
+            <br />
+            <label>Personel Branş</label>
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @required = "required" })
+            <br />
+            <label>Resim Yolu</label>
+            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", @required = "required" })
+            <br />
+            <button class="btn btn-success">KAYDET</button>
+        </form>
+
+    </div>
+</div>
+}
+
+

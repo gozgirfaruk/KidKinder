@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@Html.Action("partialHead", "Default")
+<body>
+    <!-- Navbar Start -->
+    @Html.Action("partialNavbar", "Default")
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    @Html.Action("partialContactHeader","Contact")
+    <!-- Header End -->
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5">
+                    <span class="px-2">Bize Ulaşın !</span>
+                </p>
+                <h1 class="mb-4">Bize Soru Sorabilirsin</h1>
+            </div>
+            <div class="row">
+                @Html.Action("partialSupport","Contact")
+                @Html.Action("partialContactAdress","Contact")
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+    <!-- Footer Start -->
+    @Html.Action("partialFooter", "Default")
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    @Html.Action("partialScripts", "Default")
+</body>
+</html>

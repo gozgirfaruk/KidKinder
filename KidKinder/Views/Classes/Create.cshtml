@@ -1,0 +1,45 @@
+﻿@model KidKinder.Models.Entities.ClassRoom
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<link href="~/Template/KidAdmin/assets/css/Form1.css" rel="stylesheet" />
+
+@using (Html.BeginForm("NewClass", "Classes", FormMethod.Post))
+{
+
+    <div class="container">
+        <div class="form-container">
+
+            <form method="post">
+                <label>Başlık</label>
+                @Html.TextBoxFor(x => x.Title, new { @required ="required"})
+                <br />
+
+                <label>Açıklama</label>
+                @Html.TextBoxFor(x => x.Description, new { @required = "required" })
+                <br />
+                <label>Yaş Aralığı</label>
+                @Html.TextBoxFor(x => x.AgeOfKids, new { @required = "required" })
+                <br />
+                <label>Toplam Ders</label>
+                @Html.TextBoxFor(x => x.TotalSeat, new { @required = "required" })
+                <br />
+                <label>Saat </label>
+                @Html.TextBoxFor(x => x.ClassTime, new { @required = "required" })
+                <br />
+                <label>Ücret</label>
+                @Html.TextBoxFor(x => x.Price, new { @required = "required" })
+                <br />
+                <label>Resim Yolu</label>
+                @Html.TextBoxFor(x => x.ImageUrl, new { @required = "required" })
+                <br />
+                <button class="btn btn-outline-success">Kaydet</button>
+            </form>
+        </div>
+    </div>
+
+}
+
+

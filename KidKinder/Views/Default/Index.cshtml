@@ -1,0 +1,35 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+    <!-- Header Start -->
+    @Html.Action("partialFeature", "Default")
+    <!-- Header End -->
+    <!-- Facilities Start -->
+    @Html.Action("partialService", "Default")
+    <!-- Facilities Start -->
+    <!-- About Start -->
+    @Html.Action("partialAbout", "Default")
+    <!-- About End -->
+    <!-- Class Start -->
+    @Html.Action("partialClassRoom", "Default")
+    <!-- Class End -->
+    <!-- Registration Start -->
+    @Html.Action("partialBookASeat", "Default")
+    <!-- Registration End -->
+    <!-- Team Start -->
+    @Html.Action("partialTeacher", "Default")
+    <!-- Team End -->
+    <!-- Testimonial Start -->
+    @Html.Action("partialTestimonial", "Default")
+    <!-- Testimonial End -->
+
+
+</body>
+</html>

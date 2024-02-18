@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DE60A00-4E01-464A-9871-7E7157B275A8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KidKinder</RootNamespace>
+    <AssemblyName>KidKinder</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Context\KidKinderContext.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402081057048_mig1.cs" />
+    <Compile Include="Migrations\202402081057048_mig1.designer.cs">
+      <DependentUpon>202402081057048_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402131212354_mig2.cs" />
+    <Compile Include="Migrations\202402131212354_mig2.designer.cs">
+      <DependentUpon>202402131212354_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402151125161_mig3.cs" />
+    <Compile Include="Migrations\202402151125161_mig3.designer.cs">
+      <DependentUpon>202402151125161_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402171229545_migGallery.cs" />
+    <Compile Include="Migrations\202402171229545_migGallery.designer.cs">
+      <DependentUpon>202402171229545_migGallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Entities\About.cs" />
+    <Compile Include="Models\Entities\AboutList.cs" />
+    <Compile Include="Models\Entities\Address.cs" />
+    <Compile Include="Models\Entities\Admin.cs" />
+    <Compile Include="Models\Entities\BookASeat.cs" />
+    <Compile Include="Models\Entities\ClassRoom.cs" />
+    <Compile Include="Models\Entities\Communication.cs" />
+    <Compile Include="Models\Entities\Contact.cs" />
+    <Compile Include="Models\Entities\Feature.cs" />
+    <Compile Include="Models\Entities\Gallery.cs" />
+    <Compile Include="Models\Entities\MailSubscribe.cs" />
+    <Compile Include="Models\Entities\Notification.cs" />
+    <Compile Include="Models\Entities\SendMessageViewModel.cs" />
+    <Compile Include="Models\Entities\Service.cs" />
+    <Compile Include="Models\Entities\SocialMedia.cs" />
+    <Compile Include="Models\Entities\Teacher.cs" />
+    <Compile Include="Models\Entities\Testimonial.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="libman.json" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\KidAdmin\accordion.html" />
+    <Content Include="Template\KidAdmin\assets\css\animate.css\css\animate.css" />
+    <Content Include="Template\KidAdmin\assets\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Template\KidAdmin\assets\css\chartist\chartist.css" />
+    <Content Include="Template\KidAdmin\assets\css\component.css" />
+    <Content Include="Template\KidAdmin\assets\css\font-awesome-n.min.css" />
+    <Content Include="Template\KidAdmin\assets\css\font-awesome.min.css" />
+    <Content Include="Template\KidAdmin\assets\css\Form1.css" />
+    <Content Include="Template\KidAdmin\assets\css\ionicons.css" />
+    <Content Include="Template\KidAdmin\assets\css\jquery.mCustomScrollbar.css" />
+    <Content Include="Template\KidAdmin\assets\css\linearicons.css" />
+    <Content Include="Template\KidAdmin\assets\css\morris.js\css\morris.css" />
+    <Content Include="Template\KidAdmin\assets\css\simple-line-icons.css" />
+    <Content Include="Template\KidAdmin\assets\css\style.css" />
+    <Content Include="Template\KidAdmin\assets\css\style.min.css" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-brands-400.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-regular-400.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-solid-900.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\feather\css\feather.css" />
+    <Content Include="Template\KidAdmin\assets\icon\feather\fonts\feather.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\css\font-awesome.css" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\fontawesome-webfont.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\icofont\css\icofont.css" />
+    <Content Include="Template\KidAdmin\assets\icon\ionicons.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\Linearicons-Free.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\Simple-Line-Icons.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\themify-icons\fonts\themify.svg" />
+    <Content Include="Template\KidAdmin\assets\icon\themify-icons\themify-icons.css" />
+    <Content Include="Template\KidAdmin\assets\images\auth\logo-dark.png" />
+    <Content Include="Template\KidAdmin\assets\images\auth\Logo-small-bottom.png" />
+    <Content Include="Template\KidAdmin\assets\images\auth\logo.png" />
+    <Content Include="Template\KidAdmin\assets\images\avatar-1.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\avatar-2.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\avatar-3.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\avatar-4.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\avatar-5.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\breadcrumb-bg.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\browser\chrome.png" />
+    <Content Include="Template\KidAdmin\assets\images\browser\firefox.png" />
+    <Content Include="Template\KidAdmin\assets\images\browser\ie.png" />
+    <Content Include="Template\KidAdmin\assets\images\browser\opera.png" />
+    <Content Include="Template\KidAdmin\assets\images\browser\safari.png" />
+    <Content Include="Template\KidAdmin\assets\images\favicon.ico" />
+    <Content Include="Template\KidAdmin\assets\images\kidslogo.png" />
+    <Content Include="Template\KidAdmin\assets\images\logo-blue.png" />
+    <Content Include="Template\KidAdmin\assets\images\logo.png" />
+    <Content Include="Template\KidAdmin\assets\images\me.png" />
+    <Content Include="Template\KidAdmin\assets\images\mega-menu\01.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\mega-menu\02.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\mega-menu\03.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\select-arrow.png" />
+    <Content Include="Template\KidAdmin\assets\images\user-bg.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\AUSTRALIA.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\BRAZIL.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\DIGITALPEN.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\GERMANY.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\IPAD.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\PHONE1.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\PHONE2.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\PHONE3.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\PHONE4.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\prod1.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\prod2.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\prod3.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\prod4.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\TABLET.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\UK.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\USA.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\widget\wather2bottom.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\wather2m.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\wather2star1.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\wather2star2.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\watherbottom.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\wathernature.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\watherstar1.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\watherstar2.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\wsm-3-star-1.png" />
+    <Content Include="Template\KidAdmin\assets\images\widget\wsm-3-star-2.png" />
+    <Content Include="Template\KidAdmin\assets\js\animation.js" />
+    <Content Include="Template\KidAdmin\assets\js\bootstrap-growl.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\classie.js" />
+    <Content Include="Template\KidAdmin\assets\js\color-json-common-page.js" />
+    <Content Include="Template\KidAdmin\assets\js\common-pages.js" />
+    <Content Include="Template\KidAdmin\assets\js\common-pages.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\counter.js" />
+    <Content Include="Template\KidAdmin\assets\js\float\curvedLines.js" />
+    <Content Include="Template\KidAdmin\assets\js\float\jquery.flot.categories.js" />
+    <Content Include="Template\KidAdmin\assets\js\float\jquery.flot.js" />
+    <Content Include="Template\KidAdmin\assets\js\float\jquery.flot.pie.js" />
+    <Content Include="Template\KidAdmin\assets\js\float\jquery.flot.tooltip.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="Template\KidAdmin\assets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\jquery.easypiechart.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\jquery.mousewheel.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\jquery.quicksearch.js" />
+    <Content Include="Template\KidAdmin\assets\js\jquery\jquery.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\modal.js" />
+    <Content Include="Template\KidAdmin\assets\js\modalEffects.js" />
+    <Content Include="Template\KidAdmin\assets\js\modernizr\css-scrollbars.js" />
+    <Content Include="Template\KidAdmin\assets\js\modernizr\modernizr.js" />
+    <Content Include="Template\KidAdmin\assets\js\morris.js\morris.js" />
+    <Content Include="Template\KidAdmin\assets\js\owl-custom.js" />
+    <Content Include="Template\KidAdmin\assets\js\pcoded.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\popper.js\popper.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\raphael\raphael.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\rating.js" />
+    <Content Include="Template\KidAdmin\assets\js\script.js" />
+    <Content Include="Template\KidAdmin\assets\js\script.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\SmoothScroll.js" />
+    <Content Include="Template\KidAdmin\assets\js\swiper-custom.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\horizontal-layout.min.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\menu\box-layout.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\menu\menu-compact.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\menu\menu-header-fixed.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\menu\menu-hori-fixed.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\menu\menu-rtl.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\menu\menu-sidebar-fixed.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\menu\menu-static.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\vertical-layout.js" />
+    <Content Include="Template\KidAdmin\assets\js\vertical\vertical-layout.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\accordion\accordion.js" />
+    <Content Include="Template\KidAdmin\assets\pages\accordion\accordion.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\chart\morris\morris-custom-chart.js" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\css\amchart.css" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\css\export.css" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\js\amcharts.js" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\js\custom-amchart.js" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\js\export.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\js\images\dragIconRoundBigH.svg" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\js\light.js" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\amchart\js\serial.js" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\custom-dashboard.js" />
+    <Content Include="Template\KidAdmin\assets\pages\dashboard\custom-dashboard.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\google-maps\gmaps.js" />
+    <Content Include="Template\KidAdmin\assets\pages\google-maps\google-maps.js" />
+    <Content Include="Template\KidAdmin\assets\pages\icon-modal.js" />
+    <Content Include="Template\KidAdmin\assets\pages\notification\notification.css" />
+    <Content Include="Template\KidAdmin\assets\pages\notification\notification.js" />
+    <Content Include="Template\KidAdmin\assets\pages\todo\todo.js" />
+    <Content Include="Template\KidAdmin\assets\pages\waves\css\waves.min.css" />
+    <Content Include="Template\KidAdmin\assets\pages\waves\js\waves.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\amcharts.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\amcharts.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\ammap.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\ammap.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\continentsLow.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\continentsLow.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\export.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\gauge.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\gauge.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\images\dragIconRoundBig.svg" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\images\lens.svg" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\light.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\light.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\pie.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\pie.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\serial.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\serial.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\usaLow.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\worldLow.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\amchart\worldLow.min.js" />
+    <Content Include="Template\KidAdmin\assets\pages\widget\excanvas.js" />
+    <Content Include="Template\KidAdmin\auth-normal-sign-in.html" />
+    <Content Include="Template\KidAdmin\auth-sign-up.html" />
+    <Content Include="Template\KidAdmin\breadcrumb.html" />
+    <Content Include="Template\KidAdmin\bs-basic-table.html" />
+    <Content Include="Template\KidAdmin\button.html" />
+    <Content Include="Template\KidAdmin\chart-morris.html" />
+    <Content Include="Template\KidAdmin\color.html" />
+    <Content Include="Template\KidAdmin\form-elements-component.html" />
+    <Content Include="Template\KidAdmin\index.html" />
+    <Content Include="Template\KidAdmin\label-badge.html" />
+    <Content Include="Template\KidAdmin\map-google.html" />
+    <Content Include="Template\KidAdmin\notification.html" />
+    <Content Include="Template\KidAdmin\sample-page.html" />
+    <Content Include="Template\KidAdmin\tabs.html" />
+    <Content Include="Template\KidAdmin\tooltip.html" />
+    <Content Include="Template\KidAdmin\typography.html" />
+    <Content Include="Template\KidKinder\about.html" />
+    <Content Include="Template\KidKinder\blog.html" />
+    <Content Include="Template\KidKinder\class.html" />
+    <Content Include="Template\KidKinder\contact.html" />
+    <Content Include="Template\KidKinder\css\style.css" />
+    <Content Include="Template\KidKinder\css\style.min.css" />
+    <Content Include="Template\KidKinder\gallery.html" />
+    <Content Include="Template\KidKinder\img\about-1.jpg" />
+    <Content Include="Template\KidKinder\img\about-2.jpg" />
+    <Content Include="Template\KidKinder\img\bigabout.jpg" />
+    <Content Include="Template\KidKinder\img\blog-1.jpg" />
+    <Content Include="Template\KidKinder\img\blog-2.jpg" />
+    <Content Include="Template\KidKinder\img\blog-3.jpg" />
+    <Content Include="Template\KidKinder\img\class-1.jpg" />
+    <Content Include="Template\KidKinder\img\class-2.jpg" />
+    <Content Include="Template\KidKinder\img\class-3.jpg" />
+    <Content Include="Template\KidKinder\img\detail.jpg" />
+    <Content Include="Template\KidKinder\img\header.png" />
+    <Content Include="Template\KidKinder\img\portfolio-1.jpg" />
+    <Content Include="Template\KidKinder\img\portfolio-2.jpg" />
+    <Content Include="Template\KidKinder\img\portfolio-3.jpg" />
+    <Content Include="Template\KidKinder\img\portfolio-4.jpg" />
+    <Content Include="Template\KidKinder\img\portfolio-5.jpg" />
+    <Content Include="Template\KidKinder\img\portfolio-6.jpg" />
+    <Content Include="Template\KidKinder\img\post-1.jpg" />
+    <Content Include="Template\KidKinder\img\post-2.jpg" />
+    <Content Include="Template\KidKinder\img\post-3.jpg" />
+    <Content Include="Template\KidKinder\img\resim.jpg" />
+    <Content Include="Template\KidKinder\img\science.jpg" />
+    <Content Include="Template\KidKinder\img\smallabout.jpg" />
+    <Content Include="Template\KidKinder\img\team-1.jpg" />
+    <Content Include="Template\KidKinder\img\team-2.jpg" />
+    <Content Include="Template\KidKinder\img\team-3.jpg" />
+    <Content Include="Template\KidKinder\img\team-4.jpg" />
+    <Content Include="Template\KidKinder\img\testimonial-1.jpg" />
+    <Content Include="Template\KidKinder\img\testimonial-2.jpg" />
+    <Content Include="Template\KidKinder\img\testimonial-3.jpg" />
+    <Content Include="Template\KidKinder\img\testimonial-4.jpg" />
+    <Content Include="Template\KidKinder\img\testimonial.jpg" />
+    <Content Include="Template\KidKinder\img\user.jpg" />
+    <Content Include="Template\KidKinder\index.html" />
+    <Content Include="Template\KidKinder\js\main.js" />
+    <Content Include="Template\KidKinder\kindergarten-website-template.jpg" />
+    <Content Include="Template\KidKinder\lib\easing\easing.js" />
+    <Content Include="Template\KidKinder\lib\easing\easing.min.js" />
+    <Content Include="Template\KidKinder\lib\flaticon\font\flaticon.css" />
+    <Content Include="Template\KidKinder\lib\flaticon\font\flaticon.html" />
+    <Content Include="Template\KidKinder\lib\flaticon\font\Flaticon.svg" />
+    <Content Include="Template\KidKinder\lib\isotope\isotope.pkgd.js" />
+    <Content Include="Template\KidKinder\lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="Template\KidKinder\lib\lightbox\css\lightbox.css" />
+    <Content Include="Template\KidKinder\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="Template\KidKinder\lib\lightbox\images\close.png" />
+    <Content Include="Template\KidKinder\lib\lightbox\images\loading.gif" />
+    <Content Include="Template\KidKinder\lib\lightbox\images\next.png" />
+    <Content Include="Template\KidKinder\lib\lightbox\images\prev.png" />
+    <Content Include="Template\KidKinder\lib\lightbox\js\lightbox.js" />
+    <Content Include="Template\KidKinder\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="Template\KidKinder\lib\lightbox\links.php" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Template\KidKinder\lib\tempusdominus\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="Template\KidKinder\lib\tempusdominus\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="Template\KidKinder\lib\tempusdominus\js\moment-timezone.min.js" />
+    <Content Include="Template\KidKinder\lib\tempusdominus\js\moment.min.js" />
+    <Content Include="Template\KidKinder\lib\tempusdominus\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="Template\KidKinder\lib\tempusdominus\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="Template\KidKinder\LICENSE.txt" />
+    <Content Include="Template\KidKinder\mail\contact.js" />
+    <Content Include="Template\KidKinder\mail\contact.php" />
+    <Content Include="Template\KidKinder\mail\jqBootstrapValidation.min.js" />
+    <Content Include="Template\KidKinder\READ-ME.txt" />
+    <Content Include="Template\KidKinder\single.html" />
+    <Content Include="Template\KidKinder\team.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Template\KidKinder\lib\flaticon\font\Flaticon.ttf" />
+    <Content Include="Template\KidKinder\lib\flaticon\font\Flaticon.woff" />
+    <Content Include="Template\KidKinder\lib\flaticon\font\Flaticon.woff2" />
+    <Content Include="Template\KidKinder\lib\flaticon\font\_flaticon.scss" />
+    <Content Include="Template\KidKinder\lib\flaticon\license\license.pdf" />
+    <Content Include="Template\KidKinder\lib\owlcarousel\LICENSE" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_interactions.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_overflow.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_shadows.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_stretched-link.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_card.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_close.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_code.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_images.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_input-group.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_media.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_print.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_root.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_type.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="Template\KidKinder\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Template\KidKinder\scss\style.scss" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\partialHead.cshtml" />
+    <Content Include="Views\Default\partialNavbar.cshtml" />
+    <Content Include="Views\Default\partialFeature.cshtml" />
+    <Content Include="Views\Default\partialService.cshtml" />
+    <Content Include="Views\Default\partialAbout.cshtml" />
+    <Content Include="Views\Default\partialClassRoom.cshtml" />
+    <Content Include="Views\Default\partialBookASeat.cshtml" />
+    <Content Include="Views\Default\partialTeacher.cshtml" />
+    <Content Include="Views\Default\partialTestimonial.cshtml" />
+    <Content Include="Views\Default\partialFooter.cshtml" />
+    <Content Include="Views\Default\partialScripts.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\partialContactHeader.cshtml" />
+    <Content Include="Views\Contact\partialContactAdress.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Default\AboutIndex.cshtml" />
+    <Content Include="Views\Default\ClassesIndex.cshtml" />
+    <Content Include="Views\Default\TeachersIndex.cshtml" />
+    <Content Include="Views\Default\GalleryIndex.cshtml" />
+    <Content Include="Views\Default\ContactIndex.cshtml" />
+    <Content Include="Views\Default\partialContact.cshtml" />
+    <Content Include="Views\AdminLayout\Index.cshtml" />
+    <Content Include="Template\KidAdmin\assets\icon\CAW.TTF" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-brands-400.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-brands-400.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-brands-400.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-brands-400.woff2" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-regular-400.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-regular-400.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-regular-400.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-regular-400.woff2" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-solid-900.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-solid-900.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-solid-900.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\fa-solid-900.woff2" />
+    <Content Include="Template\KidAdmin\assets\icon\feather\fonts\feather.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\feather\fonts\feather.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\feather\fonts\feather.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\KidAdmin\assets\icon\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Template\KidAdmin\assets\icon\fontawesome-webfont.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\fontawesome-webfont.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\fontawesome-webfont.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\fontawesome-webfont.woff2" />
+    <Content Include="Template\KidAdmin\assets\icon\FontAwesome.otf" />
+    <Content Include="Template\KidAdmin\assets\icon\icofont\fonts\icofont.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\icofont\fonts\icofont.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\icofont\fonts\icofont.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\ionicons.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\ionicons.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\ionicons.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\Linearicons-Free.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\Linearicons-Free.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\Linearicons-Free.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\Linearicons-Free.woff2" />
+    <Content Include="Template\KidAdmin\assets\icon\SEGOEUI.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\SEGOEUIB.TTF" />
+    <Content Include="Template\KidAdmin\assets\icon\segoeuii.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\SEGOEUIZ.TTF" />
+    <Content Include="Template\KidAdmin\assets\icon\Simple-Line-Icons.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\Simple-Line-Icons.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\Simple-Line-Icons.woff" />
+    <Content Include="Template\KidAdmin\assets\icon\Simple-Line-Icons.woff2" />
+    <Content Include="Template\KidAdmin\assets\icon\themify-icons\fonts\themify.eot" />
+    <Content Include="Template\KidAdmin\assets\icon\themify-icons\fonts\themify.ttf" />
+    <Content Include="Template\KidAdmin\assets\icon\themify-icons\fonts\themify.woff" />
+    <Content Include="Template\KidAdmin\assets\images\auth\Thumbs.db" />
+    <Content Include="Template\KidAdmin\assets\images\Thumbs.db" />
+    <Content Include="Views\AdminLayout\partialHead.cshtml" />
+    <Content Include="Views\AdminLayout\partialPreLoader.cshtml" />
+    <Content Include="Views\AdminLayout\partialNavbar.cshtml" />
+    <Content Include="Views\AdminLayout\partialNotification.cshtml" />
+    <Content Include="Views\AdminLayout\partialNavbarProfileHeader.cshtml" />
+    <Content Include="Views\AdminLayout\partialSideBar.cshtml" />
+    <Content Include="Views\AdminLayout\partialScripts.cshtml" />
+    <Content Include="Views\Teacher\TeacherList.cshtml" />
+    <Content Include="Views\Default\partialAboutSmall.cshtml" />
+    <Content Include="Views\Default\partialAboutSList.cshtml" />
+    <Content Include="Views\Teacher\CreateTeacher.cshtml" />
+    <Content Include="Views\Contact\partialSupport.cshtml" />
+    <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\Classes\Create.cshtml" />
+    <Content Include="Views\Classes\DetailClasses.cshtml" />
+    <Content Include="Views\Classes\BringClass.cshtml" />
+    <Content Include="Views\Teacher\BringTeacher.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202402081057048_mig1.resx">
+      <DependentUpon>202402081057048_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402131212354_mig2.resx">
+      <DependentUpon>202402131212354_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402151125161_mig3.resx">
+      <DependentUpon>202402151125161_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402171229545_migGallery.resx">
+      <DependentUpon>202402171229545_migGallery.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49421</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44384/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

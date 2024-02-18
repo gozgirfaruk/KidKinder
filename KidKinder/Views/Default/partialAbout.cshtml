@@ -1,0 +1,22 @@
+﻿@using KidKinder.Models.Entities
+@model List<About>
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            @foreach (var item in Model)
+            {
+                <!-- SOL ANA RESİM-->
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-5 mb-lg-0"
+                         src="@item.BigImageUrl"
+                         alt="" />
+                </div>
+                <!-- END SOL ANA RESIM-->
+            }
+            <!--BASLIK VE METİN-->
+            @Html.Action("partialAboutSmall", "Default")
+        </div>
+        
+    </div>
+
+</div>

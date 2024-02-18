@@ -1,0 +1,45 @@
+﻿@model KidKinder.Models.Entities.ClassRoom
+@{
+    ViewBag.Title = "BringClass";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
+
+
+<div class="container">
+    <div class="form-container">
+        @using (Html.BeginForm("UpdateClass", "Classes", FormMethod.Post))
+        {
+            <form>
+          
+                @Html.TextBoxFor(x=>x.ClassRoomId, new {  @type="hidden"})
+                <br />
+                <label>Başlık</label>
+                @Html.TextBoxFor(x=>x.Title)
+                <br />
+                <label>Açıklama</label>
+                @Html.TextBoxFor(x=>x.Description)
+                <br />
+                <label>Yaş Aralığı</label>
+                @Html.TextBoxFor(x=>x.AgeOfKids)
+                <br />
+                <label>Toplam Ders</label>
+                @Html.TextBoxFor(x=>x.TotalSeat)
+                <br />
+                <label>Ders Saati</label>
+                @Html.TextBoxFor(x=>x.ClassTime)
+                <br />
+                <label>Ücret</label>
+                @Html.TextBoxFor(x=>x.Price)
+                <br />
+                <lable>Resim Yolu</lable>
+                @Html.TextBoxFor(x=>x.ImageUrl)
+                <br />
+
+                <button class="btn btn-outline-secondary">Güncelle</button>
+            </form>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "AboutIndex";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+
+<div class="container-fluid bg-primary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center"
+         style="min-height: 400px">
+        <h3 class="display-3 font-weight-bold text-white">Hakkımızda</h3>
+    
+    </div>
+</div>
+<!-- About Start -->
+@Html.Action("partialAbout", "Default")
+<!-- About End -->
+<!-- Facilities Start -->
+@Html.Action("partialService", "Default")
+<!-- Facilities Start -->
+<!-- Team Start -->
+@Html.Action("partialTeacher", "Default")
+<!-- Team End -->

@@ -1,0 +1,18 @@
+﻿
+@{
+    Layout = null;
+}
+
+@Html.Action("partialHead", "Default")
+
+<!-- Navbar Start -->
+@Html.Action("partialNavbar", "Default")
+<!-- Navbar End -->
+
+@RenderBody()
+
+<!-- Footer Start -->
+@Html.Action("partialFooter", "Default")
+<!-- Footer End -->
+<!-- Back to Top -->
+@Html.Action("partialScripts", "Default")

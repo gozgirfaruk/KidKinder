@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("partialHead","AdminLayout")
+
+<body>
+ @Html.Action("partialPreLoader","AdminLayout")
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            @Html.Action("partialNavbar","AdminLayout")
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    @Html.Action("partialSideBar","AdminLayout")
+                    <div class="pcoded-content">
+                @RenderBody()
+                    <div id="styleSelector"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   @Html.Action("partialScripts","AdminLayout")
+</body>
+
+</html>
