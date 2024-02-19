@@ -1,0 +1,41 @@
+﻿@using KidKinder.Models.Entities
+@model List<Parent>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" /> 
+<center>
+    <h2>Veli Listesi</h2>
+</center>
+
+<br />
+<table>
+    <tr>
+        <th>ID</th>
+        <th>İsim</th>
+        <th>Soyisim</th>
+        <th>E-Posta</th>
+        <th>Telefon Numarası</th>
+        <th>Adres</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ParentID</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.Email</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Address</td>
+            <td><a href="/Parent/BringParent/@item.ParentID" class="btn btn-outline-secondary"><i class="fa fa-edit"></i>Güncelle</a></td>
+            <td><a href="/Parent/Delete/@item.ParentID" class="btn btn-outline-danger"><i class="fa fa-times-circle"></i>Sil</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Parent/Create/" class="btn btn-outline-success"><i class="fa fa-plus-circle"></i>Yeni Kayıt</a>

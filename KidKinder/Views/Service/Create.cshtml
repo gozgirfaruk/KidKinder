@@ -1,0 +1,43 @@
+﻿@model KidKinder.Models.Entities.Service
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
+
+<div class="container">
+    <div class="form-container" style="width:750px; height:450px;">
+        @using (Html.BeginForm("Created", "Service", FormMethod.Post))
+        {
+            <form class="form-container">
+                <div style="text-align:center; font-size:25px;">
+                    <label style="">YENİ HİZMET SAYFASI</label>
+                </div>
+                
+                @Html.TextBoxFor(x => x.ServiceId, new {@type="hidden"})
+                <br />
+                <label>Başlık</label>
+                @Html.TextBoxFor(x => x.Title,new { @required="required"})
+                <br />
+                <br />
+
+                <label>Açıklama</label>
+                @Html.TextBoxFor(x => x.Description, new { @required = "required" })
+                <br />
+                <br />
+                <label>İkon</label>
+                @Html.TextBoxFor(x => x.IconUrl, new { @required = "required"})
+                <br />
+                <br />
+                <div style="text-align:center;">
+                    <button>Kaydet</button>
+                </div>
+                
+            </form>
+        }
+
+
+    </div>
+</div>
+

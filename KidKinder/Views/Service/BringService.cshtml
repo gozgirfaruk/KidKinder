@@ -1,0 +1,33 @@
+﻿@model KidKinder.Models.Entities.Service
+@{
+    ViewBag.Title = "BringService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
+
+<div class="container">
+    <div class="form-container">
+
+        @using (Html.BeginForm("UpdateService", "Service", FormMethod.Post))
+        {
+            <form class="form-container" style="width:120px;">
+                @Html.TextBoxFor(x => x.ServiceId, new { @type = "hidden" })
+                <br />
+                <label>Hizmet Başlığı</label>
+                @Html.TextBoxFor(x => x.Title)
+                <br />
+                <label>İkon Url</label>
+                @Html.TextBoxFor(x => x.IconUrl)
+                <br />
+                <label>Açıklama</label>
+                @Html.TextAreaFor(x => x.Description, new { @class="form-container" , @style="width:558px;"})
+                <br />
+
+                <button>Kaydet</button>
+            </form>
+        }
+
+    </div>
+</div>
+

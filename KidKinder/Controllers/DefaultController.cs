@@ -87,7 +87,7 @@ namespace KidKinder.Controllers
             var values = db.ClassRooms.ToList();
             return PartialView(values);
         }
-
+        [HttpGet]
         public PartialViewResult partialBookASeat()
         {
             List<SelectListItem> values = (from x in db.ClassRooms.ToList()
@@ -99,7 +99,7 @@ namespace KidKinder.Controllers
             ViewBag.v = values;
             return PartialView();
         }
-
+        [HttpPost]
         public ActionResult CreateBookASeat(BookASeat aSeat)
         {
             db.BookASeats.Add(aSeat);
@@ -139,7 +139,8 @@ namespace KidKinder.Controllers
 
         public PartialViewResult partialContact()
         {
-            return PartialView();
+            var values = db.Contacts.ToList();
+            return PartialView(values);
         }
 
 

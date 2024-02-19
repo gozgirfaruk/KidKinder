@@ -1,0 +1,44 @@
+﻿@model KidKinder.Models.Entities.Parent
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<center>
+    <h2>Yeni Veli Girişi</h2>
+</center>
+
+
+
+<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
+
+<div class="container">
+    <div class="form-container">
+        @using (Html.BeginForm("Create", "Parent", FormMethod.Post))
+        {
+            <form>
+                <label>İsim :</label>
+                 @Html.TextBoxFor(x=>x.FirstName)
+                <br />
+                <br />
+                <label>Soyisim :</label>
+                @Html.TextBoxFor(x=>x.LastName)
+                <br /><br />
+                <label>E-posta :</label>
+                @Html.TextBoxFor(x=>x.Email)
+                <br /><br />
+                <label>Telefon :</label>
+                @Html.TextBoxFor(x=>x.PhoneNumber)
+                <br /><br />
+                <label>Açık Adres :</label>
+                @Html.TextBoxFor(x=>x.Address)
+                <br /><br />
+                <button>Kaydet</button>
+
+            </form>
+        }
+
+
+
+
+    </div>
+</div>

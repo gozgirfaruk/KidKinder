@@ -50,7 +50,7 @@
                                            required="required" />
                                 </div>
                                 <div class="form-group">
-                                    @Html.DropDownListFor(x=>x.Name,(List<SelectListItem>)ViewBag.v, new {@class="form-group"})
+                                    @Html.DropDownListFor(x=>x.Class,(List<SelectListItem>)ViewBag.v, new {@class= "custom-select border-0 px-4", style= "height: 47px" })
                                 </div>
                                 <div>
                                     <button class="btn btn-secondary btn-block border-0 py-3"

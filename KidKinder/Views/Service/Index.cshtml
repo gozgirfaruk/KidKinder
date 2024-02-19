@@ -1,0 +1,36 @@
+﻿@using KidKinder.Models.Entities
+@model List<Service>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Template/KidAdmin/assets/css/Form1.css" rel="stylesheet" />
+<link href="~/Template/KidKinder/lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+
+    <table>
+        <tr>
+            <th>Hizmet Başlığı</th>
+            <th>Açıklama</th>
+            <th>İkon</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td><i class="@item.IconUrl" style="color:red"></i></td>
+                <td><a href="/Service/BringService/@item.ServiceId" class="btn btn-outline-secondary"><i class="fa fa-edit"></i>Güncelle</a></td>
+                <td><a href="/Service/Delete/@item.ServiceId" class="btn btn-outline-danger"><i class="fa fa-edit"></i>Sil</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Service/Create/" class="btn btn-outline-primary"><i class="fa fa-plus-circle"></i>Yeni Hizmet</a>
+
+
+

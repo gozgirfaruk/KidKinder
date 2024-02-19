@@ -1,0 +1,43 @@
+﻿@model KidKinder.Models.Entities.Parent
+@{
+    ViewBag.Title = "BringParent";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
+<center>
+    <h2>BringParent</h2>
+</center>
+
+
+<div class="container">
+<div class="form-container">
+    @using(Html.BeginForm("Update","Parent",FormMethod.Post))
+    { 
+    <form>
+        
+        @Html.TextBoxFor(x=>x.ParentID,new { @type="hidden"})
+        <label>İsim :</label>
+        @Html.TextBoxFor(x=>x.FirstName)
+        <br /><br />
+        <label>Soyisim :</label>
+        @Html.TextBoxFor(x=>x.LastName)
+        <br /><br />
+        <label>E-posta :</label>
+        @Html.TextBoxFor(x=>x.Email,new { @type="email"})
+        <br /><br />
+        <label>Telefon :</label>
+        @Html.TextBoxFor(x=>x.PhoneNumber, new { @type="tel"})
+        <br /><br />
+        <label>Açık Adres :</label>
+        @Html.TextBoxFor(x=>x.Address)
+        <br /><br />
+        <button>Kaydet</button>
+
+    </form>
+    }
+</div>  
+
+
+</div>
+

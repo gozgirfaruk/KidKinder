@@ -7,11 +7,12 @@
 
 <link href="~/Template/KidAdmin/assets/css/Form1.css" rel="stylesheet" />
 
-@Html.BeginForm("CreateTeacher", "Teacher", FormMethod.Post)
+@using(Html.BeginForm("CreateTeacher", "Teacher", FormMethod.Post))
 {
 
 <div class="container">
-    <div class="form-container">
+    <div class="form-container"  style="width:750px; height:450px;">
+        <div style="text-align:center; font-size:25px;">YENİ PERSONEL GİRİŞİ</div>
 
         <form method="post">
             <label>Personel Ad-Soyad</label>

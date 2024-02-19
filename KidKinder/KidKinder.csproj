@@ -132,6 +132,9 @@
     <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ParentController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -152,6 +155,18 @@
     <Compile Include="Migrations\202402171229545_migGallery.designer.cs">
       <DependentUpon>202402171229545_migGallery.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402190905287_updateSeat.cs" />
+    <Compile Include="Migrations\202402190905287_updateSeat.designer.cs">
+      <DependentUpon>202402190905287_updateSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402191224301_newTable.cs" />
+    <Compile Include="Migrations\202402191224301_newTable.designer.cs">
+      <DependentUpon>202402191224301_newTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402191855526_studentStat.cs" />
+    <Compile Include="Migrations\202402191855526_studentStat.designer.cs">
+      <DependentUpon>202402191855526_studentStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\About.cs" />
     <Compile Include="Models\Entities\AboutList.cs" />
@@ -165,9 +180,11 @@
     <Compile Include="Models\Entities\Gallery.cs" />
     <Compile Include="Models\Entities\MailSubscribe.cs" />
     <Compile Include="Models\Entities\Notification.cs" />
+    <Compile Include="Models\Entities\Parent.cs" />
     <Compile Include="Models\Entities\SendMessageViewModel.cs" />
     <Compile Include="Models\Entities\Service.cs" />
     <Compile Include="Models\Entities\SocialMedia.cs" />
+    <Compile Include="Models\Entities\Student.cs" />
     <Compile Include="Models\Entities\Teacher.cs" />
     <Compile Include="Models\Entities\Testimonial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -657,6 +674,15 @@
     <Content Include="Views\Classes\DetailClasses.cshtml" />
     <Content Include="Views\Classes\BringClass.cshtml" />
     <Content Include="Views\Teacher\BringTeacher.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
+    <Content Include="Views\Service\Create.cshtml" />
+    <Content Include="Views\Service\BringService.cshtml" />
+    <Content Include="Views\Parent\Index.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Parent\Create.cshtml" />
+    <Content Include="Views\Parent\BringParent.cshtml" />
+    <Content Include="Views\Student\ParentView.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -686,6 +712,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402171229545_migGallery.resx">
       <DependentUpon>202402171229545_migGallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402190905287_updateSeat.resx">
+      <DependentUpon>202402190905287_updateSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402191224301_newTable.resx">
+      <DependentUpon>202402191224301_newTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402191855526_studentStat.resx">
+      <DependentUpon>202402191855526_studentStat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
