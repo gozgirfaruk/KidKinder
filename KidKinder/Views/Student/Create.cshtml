@@ -1,12 +1,70 @@
-﻿
+﻿@model KidKinder.Models.Entities.Student
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-<center><h2>Yeni Öğrenci Girişi</h2></center>
 
 
+@using (Html.BeginForm("Create", "Student", FormMethod.Post))
+{
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Basic Form Inputs card start -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Yeni Sınıf Kayıt Sayfası</h5>
+                            </div>
+                            <div class="card-block">
 
+                                <form method="post">
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Adı :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Soyadı :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Dogum Tarihi :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.BirthDay, new { @class = "form-control form-control-round", @required = "required", @type = "date" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Ebeveyn ID :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ParentID, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Aktiflik :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Status, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-success">KAYDET</button>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <!-- Basic Form Inputs card end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
 
 
 

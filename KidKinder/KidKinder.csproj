@@ -131,6 +131,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ParentController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
@@ -256,7 +257,7 @@
     <Content Include="Template\KidAdmin\assets\images\browser\ie.png" />
     <Content Include="Template\KidAdmin\assets\images\browser\opera.png" />
     <Content Include="Template\KidAdmin\assets\images\browser\safari.png" />
-    <Content Include="Template\KidAdmin\assets\images\favicon.ico" />
+    <Content Include="Template\KidAdmin\assets\images\new.ico" />
     <Content Include="Template\KidAdmin\assets\images\kidslogo.png" />
     <Content Include="Template\KidAdmin\assets\images\logo-blue.png" />
     <Content Include="Template\KidAdmin\assets\images\logo.png" />
@@ -264,6 +265,8 @@
     <Content Include="Template\KidAdmin\assets\images\mega-menu\01.jpg" />
     <Content Include="Template\KidAdmin\assets\images\mega-menu\02.jpg" />
     <Content Include="Template\KidAdmin\assets\images\mega-menu\03.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\ran.png" />
+    <Content Include="Template\KidAdmin\assets\images\sekmeresmi.png" />
     <Content Include="Template\KidAdmin\assets\images\select-arrow.png" />
     <Content Include="Template\KidAdmin\assets\images\user-bg.jpg" />
     <Content Include="Template\KidAdmin\assets\images\widget\AUSTRALIA.jpg" />
@@ -683,6 +686,9 @@
     <Content Include="Views\Parent\BringParent.cshtml" />
     <Content Include="Views\Student\ParentView.cshtml" />
     <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\AdminLayout\partialHeader.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Student\BringStudent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

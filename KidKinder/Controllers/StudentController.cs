@@ -37,6 +37,32 @@ namespace KidKinder.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Create(Student student)
+        {
+            db.Students.Add(student);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
+
+        public ActionResult BringStudent(int id)
+        {
+            var values = db.Students.Find(id);
+            return View("BringStudent", values);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Student student)
+        {
+            var values = db.Students.Find(student.ParentID);
+            values.FirstName = student.FirstName;
+            values.LastName = student.LastName;
+            values.BirthDay = student.BirthDay;
+            values.ParentID = student.ParentID;
+            values.Status = student.Status;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

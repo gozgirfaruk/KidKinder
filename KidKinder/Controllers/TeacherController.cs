@@ -39,6 +39,7 @@ namespace KidKinder.Controllers
             db.SaveChanges();
             return RedirectToAction("TeacherList");
         }
+
         [HttpGet]
         public ActionResult BringTeacher(int id)
         {

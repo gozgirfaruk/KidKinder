@@ -5,32 +5,64 @@
 }
 
 
-<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
-<div class="container">
-    <div class="form-container">
-            <form >
 
-                @Html.TextBoxFor(x => x.ParentID, new { @type = "hidden" })
-                <label>İsim :</label>
-                @Html.TextBoxFor(x => x.FirstName)
-                <br /><br />
-                <label>Soyisim :</label>
-                @Html.TextBoxFor(x => x.LastName)
-                <br /><br />
-                <label>E-posta :</label>
-                @Html.TextBoxFor(x => x.Email, new { @type = "email" })
-                <br /><br />
-                <label>Telefon :</label>
-                @Html.TextBoxFor(x => x.PhoneNumber)
-                <br /><br />
-                <label>Açık Adres :</label>
-                @Html.TextAreaFor(x => x.Address,new { @class="form-container", @style="width:558px;"})
-                <br /><br />
-                <a href="/Student/Index/" class="btn btn-outline-dark"><i class="fa fa-mail-reply-all"></i>Geri Dön</a>
-               
-            </form>
-        
+<div class="main-body">
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Basic Form Inputs card start -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Yeni Sınıf Kayıt Sayfası</h5>
+                        </div>
+                        <div class="card-block">
+                           
+                                <form method="post">
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Başlık :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ParentID, new { @class = "form-control form-control-round", @required = "required",@type="hidden" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Açıklama :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Yaş Aralığı :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Toplam Ders :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Başlangıç Saati :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Ücret :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Address, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <a href="/Student/Index/" class="btn btn-outline-dark"><i class="fa fa-mail-reply-all"></i>Geri Dön</a>
+                                </form>
+                        </div>
+                    </div>
+                    <!-- Basic Form Inputs card end -->
+                </div>
+            </div>
+        </div>
     </div>
-
-
 </div>

@@ -5,30 +5,45 @@
 }
 
 
-<link href="~/Template/KidAdmin/assets/css/Form1.css" rel="stylesheet" />
 
-@using(Html.BeginForm("CreateTeacher", "Teacher", FormMethod.Post))
-{
+<div class="main-body">
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Basic Form Inputs card start -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Yeni Öğretmen Kayıt Sayfası</h5>
+                        </div>
+                        <div class="card-block">
+                            <form method="post">
 
-<div class="container">
-    <div class="form-container"  style="width:750px; height:450px;">
-        <div style="text-align:center; font-size:25px;">YENİ PERSONEL GİRİŞİ</div>
-
-        <form method="post">
-            <label>Personel Ad-Soyad</label>
-            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", @required = "required" })
-            <br />
-            <label>Personel Branş</label>
-            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @required = "required" })
-            <br />
-            <label>Resim Yolu</label>
-            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", @required = "required" })
-            <br />
-            <button class="btn btn-success">KAYDET</button>
-        </form>
-
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Öğretmen Ad-Soyad :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-round" name="NameSurname" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Öğretmen Branş :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-round" name="Title" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Öğretmen Resim Url :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-round" name="ImageUrl" required>
+                                    </div>
+                                </div>
+                                <button class="btn btn-success">KAYDET</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Basic Form Inputs card end -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-}
-
-

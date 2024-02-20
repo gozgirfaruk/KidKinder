@@ -4,40 +4,65 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
-<center>
-    <h2>BringParent</h2>
-</center>
+<div class="main-body">
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Basic Form Inputs card start -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Yeni Sınıf Kayıt Sayfası</h5>
+                        </div>
+                        <div class="card-block">
+                            @using (Html.BeginForm("Update", "Parent", FormMethod.Post))
+                            {
+                                <form method="post">
 
-
-<div class="container">
-<div class="form-container">
-    @using(Html.BeginForm("Update","Parent",FormMethod.Post))
-    { 
-    <form>
-        
-        @Html.TextBoxFor(x=>x.ParentID,new { @type="hidden"})
-        <label>İsim :</label>
-        @Html.TextBoxFor(x=>x.FirstName)
-        <br /><br />
-        <label>Soyisim :</label>
-        @Html.TextBoxFor(x=>x.LastName)
-        <br /><br />
-        <label>E-posta :</label>
-        @Html.TextBoxFor(x=>x.Email,new { @type="email"})
-        <br /><br />
-        <label>Telefon :</label>
-        @Html.TextBoxFor(x=>x.PhoneNumber, new { @type="tel"})
-        <br /><br />
-        <label>Açık Adres :</label>
-        @Html.TextBoxFor(x=>x.Address)
-        <br /><br />
-        <button>Kaydet</button>
-
-    </form>
-    }
-</div>  
-
-
+                                    <div class="form-group row">
+                                       
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ParentID, new { @class = "form-control form-control-round", @required = "required" ,@type="hidden"})
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">İsim :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Soy İsim :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">E-Posta :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Telefon Numarası :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Açık Ev Adresi :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Address, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-success">KAYDET</button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                    <!-- Basic Form Inputs card end -->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-

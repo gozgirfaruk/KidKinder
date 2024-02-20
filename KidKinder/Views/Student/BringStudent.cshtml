@@ -1,9 +1,8 @@
-﻿@model KidKinder.Models.Entities.Service
+﻿@model KidKinder.Models.Entities.Student
 @{
-    ViewBag.Title = "BringService";
+    ViewBag.Title = "BringStudent";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
 
 <div class="main-body">
     <div class="page-wrapper">
@@ -16,31 +15,38 @@
                             <h5>Yeni Sınıf Kayıt Sayfası</h5>
                         </div>
                         <div class="card-block">
-                            @using (Html.BeginForm("UpdateService", "Service", FormMethod.Post))
+                            @using (Html.BeginForm("Update", "Student", FormMethod.Post))
                             {
                                 <form method="post">
 
                                     <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Adı :</label>
                                         <div class="col-sm-10">
-                                            @Html.TextBoxFor(x => x.ServiceId, new { @class = "form-control form-control-round", @required = "required" ,@type="hidden"})
+                                            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control form-control-round", @required = "required" })
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Başlık :</label>
+                                        <label class="col-sm-2 col-form-label">Soyadı :</label>
                                         <div class="col-sm-10">
-                                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control form-control-round", @required = "required" })
+                                            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control form-control-round", @required = "required" })
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">İkon Url :</label>
+                                        <label class="col-sm-2 col-form-label">Doğum Tarihi :</label>
                                         <div class="col-sm-10">
-                                            @Html.TextBoxFor(x => x.IconUrl, new { @class = "form-control form-control-round", @required = "required" })
+                                            @Html.TextBoxFor(x => x.BirthDay, new { @class = "form-control form-control-round", @required = "required"})
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Geniş Açıklama :</label>
+                                        <label class="col-sm-2 col-form-label">Ebeveyn ID :</label>
                                         <div class="col-sm-10">
-                                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control form-control-round", @required = "required" })
+                                            @Html.TextBoxFor(x => x.ParentID, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Aktiflik :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Status, new { @class = "form-control form-control-round", @required = "required" })
                                         </div>
                                     </div>
                                     <button class="btn btn-success">KAYDET</button>

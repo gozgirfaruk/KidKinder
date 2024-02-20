@@ -5,46 +5,75 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
-<center>
-    <h2>Öğrenci Listesi</h2>
-</center>
-<br />
-<table>
-    <tr>
-        <th>ID</th>
-        <th>İsim</th>
-        <th>Soyisim</th>
-        <th>Dogum Tarihi</th>
-        <th>Ebeveyn Bilgisi</th>
-        <th>Durum</th>
-        <th>Güncelle</th>
-        <th>Sil</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.StudentID</td>
-            <td>@item.FirstName</td>
-            <td>@item.LastName</td>
-            <td>@item.BirthDay.ToString("dd.MM.yyyy")</td>
-            <td><a href="/Student/ParentView/@item.ParentID"><i class="fa fa-eye"></i></a></td>
-            <td>
-                @if (item.Status != false)
-                {
-                    <i class="fa fa-thumbs-o-up"></i>
-                }
-                else
-                {
-                    <i class="fa fa-thumbs-o-down"></i>
-                }
-            </td>
 
 
-            <td><a href="#" class="btn btn-outline-secondary"><i class="fa fa-edit"></i>Güncelle</a></td>
-            <td><a href="/Student/Delete/@item.StudentID" class="btn btn-outline-danger"><i class="fa fa-times-circle"></i>Sil</a></td>
-        </tr>
-    }
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Öğrenci Listesi</h5>
+                        <span>Öğrencilere ait bilgileri bu sayfada görüntüleyebilir ve değişiklik yapabilirsiniz.</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>İsim</th>
+                                        <th>Soyisim</th>
+                                        <th>Dogum Tarihi</th>
+                                        <th>Ebeveyn Bilgisi</th>
+                                        <th>Durum</th>
+                                        <th>Güncelle</th>
+                                        <th>Sil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.StudentID</td>
+                                            <td>@item.FirstName</td>
+                                            <td>@item.LastName</td>
+                                            <td>@item.BirthDay.ToString("dd.MM.yyyy")</td>
+                                            <td><a href="/Student/ParentView/@item.ParentID"><i class="fa fa-eye"></i></a></td>
+                                            <td>
+                                                @if(item.Status!=false)
+                                                {
+                                                    <i class="fa fa-thumbs-o-up"></i>
+                                                }
+                                                else
+                                                {
+                                                    <i class="fa fa-thumbs-o-down"></i>
+                                                }
+                                            </td>
 
-</table>
-<a href="#" class="btn btn-outline-success"><i class="fa fa-plus-circle"></i>Yeni Kayıt</a>
+
+                                            <td><a href="/Student/BringStudent/@item.StudentID" class="btn btn-outline-secondary"><i class="fa fa-edit"></i>Güncelle</a></td>
+                                            <td><a href="/Student/Delete/@item.StudentID" class="btn btn-outline-danger"><i class="fa fa-times-circle"></i>Sil</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Student/Create/" class="btn btn-outline-success"><i class="fa fa-plus-circle"></i>Yeni Kayıt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

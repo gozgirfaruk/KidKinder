@@ -5,35 +5,63 @@
     ViewBag.Title = "DetailClasses";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-<link rel="stylesheet" href="~/Template/KidAdmin/assets/css/Form1.css" />
-<h2>Sınıf Detayları</h2>
 
-<table>
-    <tr>
-        <th>Başlık</th>
-        <th>Açıklama</th>
-        <th>Yaş Aralığı</th>
-        <th>Toplam Ders</th>
-        <th>Ders Saati</th>
-        <th>Ücret</th>
-        <th>Resim</th>
-        <th>Güncelle</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Title</td>
-            <td>@item.Description</td>
-            <td>@item.AgeOfKids</td>
-            <td>@item.TotalSeat</td>
-            <td>@item.ClassTime</td>
-            <td>@item.Price</td>
-            <td><img src=@item.ImageUrl style="width:100px; height:70px;" /></td>
-            <td><a href="/Classes/BringClass/@item.ClassRoomId" class="btn btn-outline-warning"><i class="fa fa-edit"></i>Güncelle</a></td>
-        </tr>
-    }
-
-</table>
-
-<a href="/Classes/Index/" class="btn btn-outline-secondary"><i class=" fa fa-mail-reply-all"></i>Geri</a>
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Öğretmen Listesi</h5>
+                        <span>Öğretmenler ile ilgili işlemleri yapabileceğiniz tabloyu listeliyorsunuz.</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Başlık</th>
+                                        <th>Açıklama</th>
+                                        <th>Yaş Aralığı</th>
+                                        <th>Toplam Ders</th>
+                                        <th>Ders Saati</th>
+                                        <th>Ücret</th>
+                                        <th>Resim</th>
+                                        <th>Güncelle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Title</td>
+                                            <td>@item.Description</td>
+                                            <td>@item.AgeOfKids</td>
+                                            <td>@item.TotalSeat</td>
+                                            <td>@item.ClassTime</td>
+                                            <td>@item.Price</td>
+                                            <td><img src=@item.ImageUrl style="width:100px; height:70px;" /></td>
+                                            <td><a href="/Classes/BringClass/@item.ClassRoomId" class="btn btn-outline-warning"><i class="fa fa-edit"></i>Güncelle</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Classes/Index/" class="btn btn-outline-secondary"><i class=" fa fa-mail-reply-all"></i>Geri</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

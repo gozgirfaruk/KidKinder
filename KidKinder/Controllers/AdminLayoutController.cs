@@ -50,5 +50,11 @@ namespace KidKinder.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult partialHeader()
+        {
+            return PartialView();
+           
+        }
     }
 }

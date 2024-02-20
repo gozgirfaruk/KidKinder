@@ -5,32 +5,61 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-<center><h2>Sınıf Listesi</h2></center>
 
-<br />
-
-<table class="table table-border">
-    <tr>
-        <th>Başlık</th>
-        <th>Toplam Ders</th>
-        <th>Ders Saati</th>
-        <th>Ücret</th>
-        <th>Gözat</th>
-        <th>Güncelle</th>
-        <th>Sil</th>
-    </tr>
-    @foreach(var item in Model)
-            {
-        <tr>
-            <td>@item.Title</td>
-            <td>@item.TotalSeat</td>
-            <td>@item.ClassTime</td>
-            <td>@item.Price</td>
-            <td><a href="/Classes/DetailClasses/" class="btn btn-outline-secondary"><i class="fa fa-level-up"></i>Gözat</a></td>
-            <td><a href="/Classes/BringClass/@item.ClassRoomId" class="btn btn-outline-warning"><i class="fa fa-edit"></i>Güncelle</a></td>
-            <td><a href="/Classes/Delete/@item.ClassRoomId" class="btn btn-outline-danger"><i class="fa fa-times-circle"></i>Sil</a></td>
-        </tr>
-            }
-   
-</table>
-<a href="/Classes/Create/" class="btn btn-outline-success"><i class="fa fa-plus-circle"></i>Yeni Sınıf Oluştur</a>
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Sınıf Listesi</h5>
+                        <span>Mevcut sınıfları görüntüleyebilir, yeni sınıf tanımlayabilir ve sınıflar ile ilgili değişikleri bu sayfadan yapabilirsiniz.</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Başlık</th>
+                                        <th>Toplam Ders</th>
+                                        <th>Ders Saati</th>
+                                        <th>Ücret</th>
+                                        <th>Gözat</th>
+                                        <th>Güncelle</th>
+                                        <th>Sil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Title</td>
+                                            <td>@item.TotalSeat</td>
+                                            <td>@item.ClassTime</td>
+                                            <td>@item.Price</td>
+                                            <td><a href="/Classes/DetailClasses/" class="btn btn-outline-secondary"><i class="fa fa-level-up"></i>Gözat</a></td>
+                                            <td><a href="/Classes/BringClass/@item.ClassRoomId" class="btn btn-outline-warning"><i class="fa fa-edit"></i>Güncelle</a></td>
+                                            <td><a href="/Classes/Delete/@item.ClassRoomId" class="btn btn-outline-danger"><i class="fa fa-times-circle"></i>Sil</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Classes/Create/" class="btn btn-outline-success"><i class="fa fa-plus-circle"></i>Yeni Sınıf Oluştur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
