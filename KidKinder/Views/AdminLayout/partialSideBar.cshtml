@@ -52,12 +52,42 @@
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
-            <li class="">
-                <a href="index.html" class="waves-effect waves-dark">
-                    <span class="pcoded-micon"><i class="ti-email"></i><b>D</b></span>
-                    <span class="pcoded-mtext">Gelen Mesajlar</span>
+            @*<li class="">
+            <a href="index.html" class="waves-effect waves-dark">
+                <span class="pcoded-micon"><i class="ti-email"></i><b>D</b></span>
+                <span class="pcoded-mtext">Gelen Mesajlar</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </li>*@
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="ti-email"></i><b>M</b></span>
+                    <span class="pcoded-mtext">Mesajlar</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
+                <ul class="pcoded-submenu">
+                    <li class=" ">
+                        <a href="/Message/InBox/" class="waves-effect waves-dark">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext">Gelenler</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/Message/OutBox/" class="waves-effect waves-dark">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext">Gönderilen</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="/Message/SubsBox/" class="waves-effect waves-dark">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext">Aboneler</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

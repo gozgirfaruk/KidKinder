@@ -133,6 +133,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ParentController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -168,6 +169,18 @@
     <Compile Include="Migrations\202402191855526_studentStat.designer.cs">
       <DependentUpon>202402191855526_studentStat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402211448406_MessageUpdate.cs" />
+    <Compile Include="Migrations\202402211448406_MessageUpdate.designer.cs">
+      <DependentUpon>202402211448406_MessageUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402211611248_updateContact.cs" />
+    <Compile Include="Migrations\202402211611248_updateContact.designer.cs">
+      <DependentUpon>202402211611248_updateContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402211954287_uptTechWork.cs" />
+    <Compile Include="Migrations\202402211954287_uptTechWork.designer.cs">
+      <DependentUpon>202402211954287_uptTechWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\About.cs" />
     <Compile Include="Models\Entities\AboutList.cs" />
@@ -182,6 +195,7 @@
     <Compile Include="Models\Entities\MailSubscribe.cs" />
     <Compile Include="Models\Entities\Notification.cs" />
     <Compile Include="Models\Entities\Parent.cs" />
+    <Compile Include="Models\Entities\SendMess.cs" />
     <Compile Include="Models\Entities\SendMessageViewModel.cs" />
     <Compile Include="Models\Entities\Service.cs" />
     <Compile Include="Models\Entities\SocialMedia.cs" />
@@ -220,7 +234,6 @@
     <Content Include="Template\KidAdmin\assets\css\component.css" />
     <Content Include="Template\KidAdmin\assets\css\font-awesome-n.min.css" />
     <Content Include="Template\KidAdmin\assets\css\font-awesome.min.css" />
-    <Content Include="Template\KidAdmin\assets\css\Form1.css" />
     <Content Include="Template\KidAdmin\assets\css\ionicons.css" />
     <Content Include="Template\KidAdmin\assets\css\jquery.mCustomScrollbar.css" />
     <Content Include="Template\KidAdmin\assets\css\linearicons.css" />
@@ -689,6 +702,12 @@
     <Content Include="Views\AdminLayout\partialHeader.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Student\BringStudent.cshtml" />
+    <Content Include="Views\Message\InBox.cshtml" />
+    <Content Include="Views\Message\SubsBox.cshtml" />
+    <Content Include="Views\Message\Listener.cshtml" />
+    <Content Include="Views\Message\partialBring.cshtml" />
+    <Content Include="Views\Message\partialCreate.cshtml" />
+    <Content Include="Views\Message\OutBox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -727,6 +746,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402191855526_studentStat.resx">
       <DependentUpon>202402191855526_studentStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402211448406_MessageUpdate.resx">
+      <DependentUpon>202402211448406_MessageUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402211611248_updateContact.resx">
+      <DependentUpon>202402211611248_updateContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402211954287_uptTechWork.resx">
+      <DependentUpon>202402211954287_uptTechWork.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

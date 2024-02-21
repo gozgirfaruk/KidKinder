@@ -26,6 +26,7 @@ namespace KidKinder.Context
        public DbSet<Gallery> Galleries { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Parent> Parents { get; set; }
+        public DbSet<SendMess> sendMesses { get; set; }
 
     }
 }

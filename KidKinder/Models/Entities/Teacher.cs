@@ -11,5 +11,6 @@ namespace KidKinder.Models.Entities
         public  string NameSurname { get; set; }
         public string Title { get; set; }
         public string ImageUrl { get; set; }
+        public string WorkTime { get; set; }
     }
 }

@@ -1,0 +1,42 @@
+﻿
+@model KidKinder.Models.Entities.SendMess
+
+
+<div class="main-body">
+    <div class="page-wrapper">
+        <div class="page-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Basic Form Inputs card start -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>GÖNDERİCİ BİLGİLERİ</h5>
+                        </div>
+                        <div class="card-block">
+                            @using (Html.BeginForm("Listener", "Message", FormMethod.Post))
+                            {
+                                <form method="post">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Alıcı ID :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ContactID, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Mesaj :</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextAreaFor(x => x.Message, new { @class = "form-control form-control-round", @required = "required" })
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-success">GÖNDER</button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                    <!-- Basic Form Inputs card end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
