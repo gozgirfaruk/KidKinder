@@ -25,6 +25,7 @@ namespace KidKinder.Controllers
             ViewBag.mostSeat = db.ClassRooms.Max(x => x.TotalSeat);
             ViewBag.sumService = db.Services.Count();
             ViewBag.sendMess = db.Testimonials.Count();
+            
  
             return View(values);
         }

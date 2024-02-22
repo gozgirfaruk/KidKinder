@@ -270,7 +270,7 @@
     <Content Include="Template\KidAdmin\assets\images\browser\ie.png" />
     <Content Include="Template\KidAdmin\assets\images\browser\opera.png" />
     <Content Include="Template\KidAdmin\assets\images\browser\safari.png" />
-    <Content Include="Template\KidAdmin\assets\images\new.ico" />
+    <Content Include="Template\KidAdmin\assets\images\moon.ico" />
     <Content Include="Template\KidAdmin\assets\images\kidslogo.png" />
     <Content Include="Template\KidAdmin\assets\images\logo-blue.png" />
     <Content Include="Template\KidAdmin\assets\images\logo.png" />
@@ -278,6 +278,7 @@
     <Content Include="Template\KidAdmin\assets\images\mega-menu\01.jpg" />
     <Content Include="Template\KidAdmin\assets\images\mega-menu\02.jpg" />
     <Content Include="Template\KidAdmin\assets\images\mega-menu\03.jpg" />
+    <Content Include="Template\KidAdmin\assets\images\mosn.png" />
     <Content Include="Template\KidAdmin\assets\images\ran.png" />
     <Content Include="Template\KidAdmin\assets\images\sekmeresmi.png" />
     <Content Include="Template\KidAdmin\assets\images\select-arrow.png" />
