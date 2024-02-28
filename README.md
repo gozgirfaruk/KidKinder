@@ -14,10 +14,11 @@ Amaç öğrencilerin durumları hakkında hızlı bir şekilde velileri bilgilen
  * Mvc
  * Entity Framework (ORM) -CodeFirst
  * LINQ
+ * Google Chart
  * Html - Css - JavaScript (UI)
  * MsSql
  * BootStrap
- * *Session Authorize
+ * Proje seviyesinde Authorize
 
 # Uygulama İçi Görüntüler
 
@@ -57,5 +58,5 @@ Amaç öğrencilerin durumları hakkında hızlı bir şekilde velileri bilgilen
 ![Ekran Görüntüsü (5)](https://github.com/gozgirfaruk/KidKinder/assets/125920944/a0d084d9-2d7f-4f54-8f11-e1b996250c71)
 
 
-![Ekran görüntüsü 2024-02-28 200244](https://github.com/gozgirfaruk/KidKinder/assets/125920944/35fb9e10-43b3-4583-b09e-e8ee8b8102df)
+![Ekran görüntüsü 2024-02-28 201929](https://github.com/gozgirfaruk/KidKinder/assets/125920944/34a23f61-5c60-4667-a9f1-52a7e6468197)
 
