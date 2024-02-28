@@ -142,6 +142,7 @@
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -751,6 +752,8 @@
     <Content Include="Views\Gallery\Home.cshtml" />
     <Content Include="Views\Gallery\Create.cshtml" />
     <Content Include="Views\GoogleChart\Index.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Testimonial\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
