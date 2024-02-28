@@ -3,7 +3,7 @@
 
 ## Projenin Amacı :
 
-*Anaokulu sistemini yeniden tasarlayarak ebeveynlerin  kolayca kullanabileceği, anaokuluna ait duyuruları,etkinlikleri takip edebileceği, aynı zamanda online olarak kayıt formlarını doldurabilmelerine ve randevu alabilmelerine imkan tanıyan bir web sayfasıdır.
+* Anaokulu sistemini yeniden tasarlayarak ebeveynlerin  kolayca kullanabileceği, anaokuluna ait duyuruları,etkinlikleri takip edebileceği, aynı zamanda online olarak kayıt formlarını doldurabilmelerine ve randevu alabilmelerine imkan tanıyan bir web sayfasıdır.
 
 Amaç öğrencilerin durumları hakkında hızlı bir şekilde velileri bilgilendirmek, yeni eklenen sınıflardan haberdar etmek, okul etkinlikleri çerçevesinde gerçekleşecek aktivitelerin duyurusunu yapmaktır.
 
