@@ -3,10 +3,9 @@
 
 ## Projenin Amacı :
 
-* Anaokulu sistemini yeniden tasarlayarak ebeveynlerin  kolayca kullanabileceği, anaokuluna ait duyuruları,etkinlikleri takip edebileceği, aynı zamanda online olarak kayıt formlarını doldurabilmelerine ve randevu alabilmelerine imkan tanıyan bir web sayfasıdır.
+* Anaokulu sistemini yeniden tasarlayacak olsaydık hangi özellikler yer alırdı sorusundan yola çıktığımız KidKiner, ebeveynlerin çocukları hakkında hızlı bir şekilde bilgilendirilmesi, okul hakkında detaylı bilgileri görüntülemesi ve bilgi sahibi olmasını, okul içerisinde ve dışarısında gerçekleşecek etkinliklerden duyurulardan haberdar olmalarını amaçlamaktadır. Ebeveynler hızlı bir şekilde derslere göz atabilir, katılmak istediği derse online forum ile hızlı bir şekilde kayıt olabilir veya randevu oluştururak ileri bir tarihe kayıt işlemini gerçekleştirebilir. Ebeveynler uygulama hakkında görüşlerini diğer kullanıcılar ile paylaşabilir, destek konusunda yöneticiler ile iletişime geçebilir.
 
-Amaç öğrencilerin durumları hakkında hızlı bir şekilde velileri bilgilendirmek, yeni eklenen sınıflardan haberdar etmek, okul etkinlikleri çerçevesinde gerçekleşecek aktivitelerin duyurusunu yapmaktır.
-
+* Admin paneli ile yeni kullanıcılar oluşturabilir, mevcut kullanıcıyı kaldırabilir. Bu sayede sistemi kontrol altında tutabilir. Sayfalar içerisinde yer alan tüm entityleri rahatlıkla crud işlemlerini uygulayarak sayfanın güncel kalmasını sağlayabilir. Gelen yorumları görüntüleme ve düzenleme hakkına sahiptir. Gelen maillere sistem içerisinde dönüş yapabilir.
 
 ## Kullanılan Teknolojiler
 
