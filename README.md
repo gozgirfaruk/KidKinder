@@ -17,7 +17,7 @@ Amaç öğrencilerin durumları hakkında hızlı bir şekilde velileri bilgilen
  * Html - Css - JavaScript (UI)
  * MsSql
  * BootStrap
- * *Session Authorize
+ * Proje seviyesinde Authorize
 
 # Uygulama İçi Görüntüler
 
