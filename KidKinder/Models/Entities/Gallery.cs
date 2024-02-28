@@ -9,6 +9,7 @@ namespace KidKinder.Models.Entities
     {
         public int GalleryID { get; set; }
         public string ImageUrl { get; set; }
-     
+        public int Status { get; set; }
+
     }
 }

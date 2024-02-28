@@ -12,6 +12,7 @@ namespace KidKinder.Controllers
     {
         // GET: Student
         KidKinderContext db = new KidKinderContext();
+
         public ActionResult Index()
         {
             var values = db.Students.ToList();

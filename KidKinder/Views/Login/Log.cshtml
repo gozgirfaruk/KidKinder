@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="~/Template/KidAdmin/assets/images/moon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/Template/Login/log.css">
+    <title>KidKinder Giriş Ekranı</title>
+</head>
+
+<body>
+   
+        <div class="container" id="container">
+            <div class="form-container sign-in">
+                <form method="post">
+                    <h1>Giriş Yap</h1>
+                    <br />
+                    <br />
+                    <input type="email" placeholder="e-Posta Adresi" name="Username">
+                    <input type="password" placeholder="Şifre" name="Password">
+                    <a href="#" onclick="myFunction()">→ Şifremi Unuttum ! ←</a>
+                    <button>Giriş</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Kayıt Sayfası</h1>
+                        <p>Hesabın Var mı ?</p>
+                        <button class="hidden" id="login"> Giriş Yap</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Merhaba !</h1>
+                        <p>Kayıtlı e-posta ve şifrenizi kullanarak giriş yapabilirsiniz.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script type="text/javascript" src="~/Template/Login/log.js"></script>
+<script>
+    function myFunction() {
+        alert("Lütfen Yöneticiniz İle İletişime Geçin");
+    }
+</script>

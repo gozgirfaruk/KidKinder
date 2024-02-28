@@ -9,8 +9,10 @@ namespace KidKinder.Models.Entities
     {
         public int TeacherId { get; set; }
         public  string NameSurname { get; set; }
-        public string Title { get; set; }
+       //public string Title { get; set; }
         public string ImageUrl { get; set; }
         public string WorkTime { get; set; }
+        public int BranchID { get; set; }
+        public virtual Branch Branch  { get; set; }
     }
 }

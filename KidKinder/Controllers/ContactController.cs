@@ -8,6 +8,7 @@ using KidKinder.Models.Entities;
 
 namespace KidKinder.Controllers
 {
+    [AllowAnonymous]
     public class ContactController : Controller
     {
         // GET: Contact
@@ -33,6 +34,7 @@ namespace KidKinder.Controllers
         [HttpGet]
         public PartialViewResult partialSupport()
         {
+            ViewBag.Now = DateTime.Now.ToString("dd.MM.yyyy");
             return PartialView();
         }
         [HttpPost]

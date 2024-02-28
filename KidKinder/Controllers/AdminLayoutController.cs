@@ -7,6 +7,7 @@ using KidKinder.Context;
 
 namespace KidKinder.Controllers
 {
+    [AllowAnonymous]
     public class AdminLayoutController : Controller
     {
         // GET: AdminLayout

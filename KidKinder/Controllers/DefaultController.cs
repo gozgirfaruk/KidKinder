@@ -8,11 +8,13 @@ using KidKinder.Context;
 
 namespace KidKinder.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         //~/Template/KidKinder/
         // GET: Default
         KidKinderContext db = new KidKinderContext();
+
         public ActionResult Index()
         {
             return View();
@@ -35,7 +37,8 @@ namespace KidKinder.Controllers
 
         public ActionResult GalleryIndex()
         {
-            var values = db.Galleries.ToList();
+
+            var values = db.Galleries.Where(x => x.Status == 1).ToList();
             return View(values);
         }
 
@@ -74,7 +77,7 @@ namespace KidKinder.Controllers
         {
             var values = db.AboutLists.ToList();
             return PartialView(values);
-          }
+        }
 
         public PartialViewResult partialAbout()
         {
@@ -84,7 +87,7 @@ namespace KidKinder.Controllers
 
         public PartialViewResult partialClassRoom()
         {
-            var values = db.ClassRooms.ToList();
+            var values = db.ClassRooms.OrderByDescending(x => x.ClassRoomId).Take(3).ToList();
             return PartialView(values);
         }
         [HttpGet]
