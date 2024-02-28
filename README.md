@@ -1,10 +1,6 @@
 
 # Anaokulu Sayfası 
 
- ### Not :
-  Login ekranı ve oturum açma işlemleri henüz gerçekleşmemiştir.
-Uygulamada bazı iyileştirmeler yapılacaktır.
-
 ## Projenin Amacı :
 
 *Anaokulu sistemini yeniden tasarlayarak ebeveynlerin  kolayca kullanabileceği, anaokuluna ait duyuruları,etkinlikleri takip edebileceği, aynı zamanda online olarak kayıt formlarını doldurabilmelerine ve randevu alabilmelerine imkan tanıyan bir web sayfasıdır.
@@ -21,6 +17,7 @@ Amaç öğrencilerin durumları hakkında hızlı bir şekilde velileri bilgilen
  * Html - Css - JavaScript (UI)
  * MsSql
  * BootStrap
+ * *Session Authorize
 
 # Uygulama İçi Görüntüler
 
