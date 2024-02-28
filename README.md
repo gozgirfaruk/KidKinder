@@ -14,6 +14,7 @@ Amaç öğrencilerin durumları hakkında hızlı bir şekilde velileri bilgilen
  * Mvc
  * Entity Framework (ORM) -CodeFirst
  * LINQ
+ * Google Chart
  * Html - Css - JavaScript (UI)
  * MsSql
  * BootStrap
