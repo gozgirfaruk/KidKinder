@@ -42,19 +42,22 @@
 ![Ekran Görüntüsü (13)](https://github.com/gozgirfaruk/KidKinder/assets/125920944/c2fdad92-80ef-46d5-b7bb-2f7454e8eeaa)
 
 
-![Ekran Görüntüsü (1)](https://github.com/gozgirfaruk/KidKinder/assets/125920944/2563cd11-b1ea-4514-aff2-3aa760ab61b2)
+![Ekran görüntüsü 2024-02-29 093244](https://github.com/gozgirfaruk/KidKinder/assets/125920944/9efc49b2-959d-41d1-a0c0-e9147eca788a)
 
 
-![Ekran Görüntüsü (2)](https://github.com/gozgirfaruk/KidKinder/assets/125920944/cdd19034-72a4-4e06-964c-f36a826734e0)
+![Ekran görüntüsü 2024-02-29 093320](https://github.com/gozgirfaruk/KidKinder/assets/125920944/ea841816-22c7-49b5-aa70-2186bba75cfa)
 
 
-![Ekran Görüntüsü (4)](https://github.com/gozgirfaruk/KidKinder/assets/125920944/963314b6-e77a-48e8-9cb4-dcea6f803c29)
+![Ekran görüntüsü 2024-02-29 093415](https://github.com/gozgirfaruk/KidKinder/assets/125920944/e0c66e98-9679-45cb-b4fb-f3d91e228566)
 
 
-![Ekran Görüntüsü (3)](https://github.com/gozgirfaruk/KidKinder/assets/125920944/b84c5985-c31b-4528-b8af-d4544a455fee)
+![Ekran görüntüsü 2024-02-29 093436](https://github.com/gozgirfaruk/KidKinder/assets/125920944/fd3c3e70-841e-491b-825f-053187394fd3)
 
 
 ![Ekran Görüntüsü (5)](https://github.com/gozgirfaruk/KidKinder/assets/125920944/a0d084d9-2d7f-4f54-8f11-e1b996250c71)
+
+
+![Ekran görüntüsü 2024-02-28 222851](https://github.com/gozgirfaruk/KidKinder/assets/125920944/ebc266be-55ff-4efd-ba61-5113553d48f1)
 
 
 ![Ekran görüntüsü 2024-02-28 201929](https://github.com/gozgirfaruk/KidKinder/assets/125920944/34a23f61-5c60-4667-a9f1-52a7e6468197)
